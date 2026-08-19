@@ -1,0 +1,104 @@
+body{
+    background-color: purple;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+.slider{
+    width: 100%;
+    overflow:hidden;
+}
+
+.slider-track{
+    display: flex;
+    gap: 24px;
+    animation: slide 20s linear infinite;
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(0);
+
+    }
+
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+img{
+    width:100px;
+    height: 100px;
+}
+
+.bubble{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.2);
+    animation: bounce 8s ease-in-out infinite alternate
+}
+
+.bubble-background{
+    position: fixed;
+    inset: 0;
+    overflow:hidden;
+    pointer-events: none;    
+}
+
+@keyframes bounce{
+    from{
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(-120px);
+    }
+}
+
+.bubble:nth-child(1){
+    left: 5%;
+    top: 50%;
+}
+
+.bubble:nth-child(2){
+    left: 40%;
+    top: 60%;
+    width: 120px;
+    height: 120px;
+    animation-duration: 11s;
+}
+.bubble:nth-child(3){
+    left: 70%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    animation-duration: 11s;
+
+}
+
+.bubble:nth-child(4){
+    left: 25%;
+    top: 25%;
+    width: 100px;
+    height: 100px;
+    animation-duration: 11s;
+
+}
+
+.bubble:nth-child(5){
+    left: 80%;
+    top: 25%;
+    width: 100px;
+    height: 100px;
+    animation-duration: 11s;
+
+}
