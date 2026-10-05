@@ -5,77 +5,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Glitter Gecko</title>
     <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Mouse+Memoirs&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    <div class="bubble-background" aria-hidden="true">
-      <span class="bubble"></span>
-      <span class="bubble"></span>
-      <span class="bubble"></span>
-      <span class="bubble"></span>
-      <span class="bubble"></span>
-    </div>
     <nav>
-      <a href="Hero">Home</a>
-      <a href="#Gallery">Gallery</a>
-      <a href="#Services">Services</a>
-      <a href="#About">About the face painters!</a>
-      <a href="#Booking">Book a Party!</a>
-      <a href="#Testimonials">Testimonials!</a>
+      <div class="left-group">
+        <a href="#hero">Gallery</a>
+        <a href="#fpcard">Services</a>
+      </div>
+
+      <div class="mid-nav">
+        <a href="#top">
+          <img src="/slider-images/GGLogo.png" alt="The Glitter Gecko Logo" />
+        </a>
+      </div>
+
+      <div class="right-group">
+        <a href="#faq">FAQ</a>
+        <a href="https://forms.gle/13E82NiVCh1BtvQEA">Book Your Event</a>
+      </div>
     </nav>
 
     <main>
-      <section id="Hero">
-        <h1>"Face Painting Services for parties and events"</h1>
-      </section>
-
-      <section id="Gallery">
-        <h2>Sliding bar of Photos</h2>
-        <div class="slider">
-          <div class="slider-track">
+      <section id="hero">
+        <h1>Face Painting for Parties and Events</h1>
+        <h2><i>Bringing smiles to every face, one design at a time!</i></h2>
+        <div class="carousel">
+          <div class="carousel-images">
+            <button class="previous" id="prev-button">←</button>
+            <img src="slider-images/tigerFp.png" alt="Tiger Facepaint" />
             <img
-              src="slider-images/butterfly-facepaint.jpg"
-              alt="Butterfly Facepaint"
-            />
-            <img src="slider-images/facepainter.jpg" alt="Facepainter" />
-            <img
-              src="slider-images/tribal-facepaint.jpg"
-              alt="Tribal Facepaint"
+              src="slider-images/spidermanFp.png"
+              alt="Spiderman Facepaint"
             />
             <img
-              src="slider-images/butterfly-facepaint.jpg"
-              alt="Butterfly Facepaint"
+              src="slider-images/eddieFavFp.png"
+              alt="Family Enjoying Facepaint"
             />
-            <img src="slider-images/facepainter.jpg" alt="Facepainter" />
+            <img src="slider-images/glitterBeard.png" alt="Glitter Beard" />
+            <img src="slider-images/tribalFp.png" alt="Suntribal Facepaint" />
             <img
-              src="slider-images/tribal-facepaint.jpg"
-              alt="Tribal Facepaint"
+              src="slider-images/momChildFp.png"
+              alt="Mom and Child with Facepaint"
             />
+            <img src="slider-images/rainbowFp.png" alt="Rainbow Facepaint" />
+            <img src="slider-images/boyTigFp.png" alt="Boy Tiger Facepaint" />
+            <img
+              src="slider-images/palmtreeFp.png"
+              alt="Sunset Palmtree Facepaint"
+            />
+            <img src="slider-images/starFp.png" alt="Star Facepaint" />
+            <button id="next-button" class="next">→</button>
           </div>
         </div>
       </section>
 
-      <section id="Services">
-        <h2>Cards of services</h2>
+      <section id="services">
+        <span id="to-serve"></span>
+        <div id="fpcard">
+          <p>Face Painting</p>
+          <p>Our rate is $125 an hour!</p>
+          <p class="divider">✦ 🦎 ✦ 🦎 ✦ 🦎 ✦</p>
+          <p>Booking 3 hours or more?</p>
+          <p>
+            <span>&darr;</span>
+            <span>&darr;</span>
+            <span>&darr;</span>
+          </p>
+          <p>Discounted Rate: $100 an hour!</p>
+          <button>
+            <a href="https://forms.gle/13E82NiVCh1BtvQEA">Book your event!</a>
+          </button>
+        </div>
       </section>
 
-      <section id="Testimonials">
-        <h2>Load in reviews from google or anywhere</h2>
+      <section id="about">
+        <h2>Meet the Founder</h2>
+        <div id="split-window">
+          <p id="about-text">
+            Hey! It's me, Shayla. I became a professional face painter at the
+            age of 16. I was lucky enough to be trained by two incredibly
+            talented artists: my sisters. Yep, that's right! I grew up in a
+            super creative family where art and developing your talents was
+            always encouraged. <br />
+            Today, we join forces to serve even bigger events when the event
+            calls for it. Some of my favorite activities have been exploring my
+            curiosity in art projects with my family, whether that's
+            woodworking, writing books or songs, or being the occasional statue
+            to model a new Halloween look that my sisters are trying out!<br />
+            Needless to say, we have a lot of fun together, and we can't wait to
+            bring the face painting entertainment to your next event! 🦎🖌️🎨
+          </p>
+          <img
+            id="about-img"
+            src="slider-images/aboutMeFp.jpg"
+            alt="The Founder of the Glitter Gecko"
+          />
+        </div>
       </section>
 
-      <section>
-        <h2>I want cards here, maybe an auto slider of reviews?</h2>
-        <p>
-          Template: Name w/ pick if available(maybe a default initials bubble),
-          testimonial, location:Orlando,FL
-        </p>
+      <section id="faq">
+        <h2>FAQ</h2>
+        <div id="q-and-a">
+          <div>
+            <p>Q: How long does the facepaint stay on?</p>
+            <p>
+              A: Our professional face paint stays on as long as you keep it
+              away from water.
+            </p>
+          </div>
+
+          <div>
+            <p>Q: What services do you offer?</p>
+            <p>A: We offer face painting for all your fun events and needs!</p>
+          </div>
+
+          <div>
+            <p>Q: Is there a minimum deposit?</p>
+            <p>
+              A: We do not require a minimum deposit. You have time to pay up
+              until the conclusion of the event!
+            </p>
+          </div>
+
+          <div>
+            <p>Q: Do you have travel fees or other fees?</p>
+            <p>
+              A: We have absolutely no hidden fees. It is the flat rate of $125
+              per hour. A discount is provided to those who book 3 or more
+              hours.
+            </p>
+          </div>
+
+          <div>
+            <p>Q: Do you do themed parties?</p>
+            <p>
+              A: For no extra charge, we accommodate the majority of themes.
+              After you submit the booking form, we will contact you to work out
+              the details.
+            </p>
+          </div>
+
+          <div>
+            <p>Q: What areas do you service?</p>
+            <p>
+              A: We go an hour and a half from Leesburg, FL in any direction.
+              Book an event today!
+            </p>
+          </div>
+
+          <div>
+            <p>Q: How large of an event can you accommodate for?</p>
+            <p>
+              A: The Glitter Gecko has accommodated for events as small as 10
+              party goers and as large as 10000+ attendees. We have a network of
+              facepainters that could accommodate any size event.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
+
     <footer>
-      <p>
-        Contact Us: Office Phone: xxx-xxx-xxxx @TheGlitterGECKO 2021 Book an
-        appointment
-      </p>
+      <p>Contact Us: 352-434-2331</p>
+      <a href="https://forms.gle/13E82NiVCh1BtvQEA">Book your event!</a>
+      <p>theglittergeckotattoos@gmail.com</p>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,9 +1,74 @@
 body{
-    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-family: Mouse Memoirs, sans-serif;
+    height: 100%;
+    position: relative;
+    background-image: linear-gradient(45deg,#5CFF66, #79FCE0, #AB61FF);
+    background-attachment: fixed;
+    margin:0px;
 }
+
+button {
+    background-color: rgb(198, 255, 180);
+    border: 3px solid #7b3fb5;
+    border-radius: 12px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: purple;
+    color: white;
+}
+
 nav{
+    height: 11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 32px;
+}
+
+.left-group{
     display: flex;
     justify-content: space-evenly;
+    width: 40%;
+}
+
+.left-group > *:hover{
+    color: blue;
+    transform: translateY(-2px);
+}
+
+.mid-nav{
+    width:20%;
+    display: flex;
+    justify-content: center;
+}
+
+.mid-nav img{
+    width: 50%;
+    transform: translateX(50%);
+    object-fit: scale-down;
+    display: flex;
+    justify-content: center;
+}
+
+.right-group{
+    display: flex;
+    justify-content: space-evenly;
+    width:40%;
+}
+
+.right-group > *:hover{
+    color: blue;
+    transform: translateY(-2px);
 }
 
 nav a{
@@ -11,94 +76,287 @@ nav a{
     color: black;
 }
 
-.slider{
-    width: 100%;
-    overflow:hidden;
+body, a, button{
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size:24px'><text y='24'>🖌️</text></svg>") 0 24, auto;
 }
 
-.slider-track{
+#hero{
     display: flex;
-    gap: 24px;
-    animation: slide 20s linear infinite;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
-@keyframes slide{
-    from{
-        transform: translateX(0);
-
-    }
-
-    to{
-        transform: translateX(-50%);
-    }
+#hero > h1{
+    font-weight: normal;
+    font-size: 48px;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
 }
 
-img{
-    width:100px;
-    height: 100px;
+#hero > h2{
+    font-weight: normal;
 }
 
-.bubble{
+
+.carousel{
+    margin-top: .83em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.carousel-images{
+    position: relative;
+    width: 1349px; /* Was 900*/
+    height: 480px;
+}
+
+.carousel img{
+    object-fit: contain;
+}
+
+.carousel button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.previous{
     position: absolute;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: rgba(255,255,255,.2);
-    animation: bounce 8s ease-in-out infinite alternate
+    left: 94.5px;
+    top: 240px;
+    width: 40px;
+    height: 40px;
 }
-
-.bubble-background{
-    position: fixed;
-    inset: 0;
-    overflow:hidden;
-    pointer-events: none;    
-}
-
-@keyframes bounce{
-    from{
-        transform: translateY(0);
-    }
-
-    to{
-        transform: translateY(-120px);
-    }
-}
-
-.bubble:nth-child(1){
-    left: 5%;
-    top: 50%;
-}
-
-.bubble:nth-child(2){
-    left: 40%;
-    top: 60%;
-    width: 120px;
+.carousel img.leftSmall{   
+    position: absolute; 
     height: 120px;
-    animation-duration: 11s;
-}
-.bubble:nth-child(3){
-    left: 70%;
-    top: 50%;
-    width: 100px;
-    height: 100px;
-    animation-duration: 11s;
-
+    width: 90px;
+    left: 164.5px;
+    top: 180px;
 }
 
-.bubble:nth-child(4){
-    left: 25%;
-    top: 25%;
-    width: 100px;
-    height: 100px;
-    animation-duration: 11s;
-
+.carousel img.leftInner{
+    position: absolute;
+    left: 284.5px;
+    top: 120px;
+    height: 240px;
+    width: 180px;
 }
 
-.bubble:nth-child(5){
-    left: 80%;
-    top: 25%;
-    width: 100px;
-    height: 100px;
-    animation-duration: 11s;
+.carousel img.active{
+    position: absolute;
+    left: 494.5px;
+    top: 0px;
+    height: 480px;
+    width: 360px;
+}
 
+.carousel img.rightInner{
+    position: absolute;
+    left: 884.5px;
+    top: 120px;
+    height: 240px;
+    width: 180px;
+}
+
+.carousel img.rightSmall{   
+    position: absolute; 
+    height: 120px;
+    width: 90px;
+    left: 1094.5px;
+    top: 180px;
+}
+
+.next{
+    position: absolute;
+    left: 1214.5px;
+    top: 240px;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel img.hidden{
+    display: none;
+}
+
+/*Card flow: Size -> Surface: background, border, corners ->
+* Inner space: Padding -> Content Layout: flexbox -> 
+* Typography: title, description, button
+*/
+#fpcard{
+    /* How big? */
+    width: 325px;
+    height: 528px;
+    margin-top: 9rem;
+
+    /* Surface */
+    background-color: rgb(198, 255, 180);
+    border: 3px solid #7b3fb5;
+    border-radius: 12px;
+    box-shadow: 5px 5px 100px purple;
+
+    /* box-shadow parameters
+    * X Y blur spread color
+    */
+
+    /* Inner space */
+    padding: 0rem;
+
+    /* Arrange the contents */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* font changes by Shayla */
+    font-size: 26px;
+}
+
+.divider{
+    margin-bottom: 1rem;
+}
+
+#fpcard > p:nth-of-type(1){
+    margin: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 64px;
+}
+
+#fpcard > p:nth-of-type(4){
+    margin-bottom: 0;
+}
+
+#fpcard > p:nth-of-type(5){
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+    margin: 5px;
+}
+
+#fpcard > p:nth-of-type(5) span{
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+    width: 20px;
+    text-align: center;
+}
+
+#fpcard > p:nth-of-type(6){
+    margin-top: 0;
+}
+
+#fpcard > button > a{
+    text-decoration: none;
+}
+
+#fpcard > button > a:hover{
+    color: white;
+}
+
+#services{
+    display: flex;
+    justify-content: center;
+}
+
+#about{
+    margin-top: 9rem;
+}
+
+
+#about > h2{
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 48px;
+}
+
+
+#split-window {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+#split-window p {
+    margin: 0px;
+    font-size: 31px;
+    width: 45%;
+    line-height: 1.5;
+}
+
+#about-img{
+    width: 400px;
+    height: 663px;
+    object-fit: cover;
+}
+
+#faq{
+    margin-top: 9rem;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 22px;
+}
+
+#faq > h2{
+    font-size: 48px;
+}
+
+#q-and-a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#q-and-a > div{
+    background-color: rgb(198, 255, 180);
+    border: 3px solid #7b3fb5;
+    border-radius: 24px;
+    box-shadow: 5px 5px 39px purple;
+    width: 50%;
+}
+
+#q-and-a > div> p:first-child{
+    font-style: italic;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 5rem;
+    font-size: 22px;
+}
+
+footer> :nth-child(1){
+    width: 33%;
+    text-align: center;
+}
+
+footer> :nth-child(3){
+    width: 33%;
+    text-align: center;
+}
+
+footer>a{
+    width: 33%;
+    margin:16px;
+    padding:0px;
+    text-align: center;
+}
+
+footer > a:hover{
+    color: blue;
+    transform: translateY(-2px);
+}
+
+footer a{
+    color: inherit;
+    text-decoration: none;
 }
